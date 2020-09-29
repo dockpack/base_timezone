@@ -36,6 +36,7 @@
   template:
     src: "timezone-{{ ansible_os_family }}.j2"
     dest: "{{ timezone_file }}"
+    mode: 0644
   tags: ['timezone']
   become: true
 
@@ -44,6 +45,7 @@
     state: link
     src: "{{ zoneinfo_dir }}{{ timezone }}"
     dest: "{{ localtime_file }}"
+    mode: 0777
     force: true
   tags: ['timezone']
   become: true
