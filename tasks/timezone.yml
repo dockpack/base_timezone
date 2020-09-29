@@ -12,6 +12,10 @@
     update_cache: true
     cache_valid_time: 86400
     state: present
+  register: apt_install
+  until: apt_install is success
+  retries: 3
+  delay: 3
   when: ansible_os_family == 'Debian'
   tags: ['timezone']
   become: true
@@ -20,6 +24,10 @@
   yum:
     name: "{{ timezone_package }}"
     state: present
+  register: yum_install
+  until: yum_install is success
+  retries: 3
+  delay: 3
   when: ansible_os_family == 'RedHat'
   tags: ['timezone']
   become: true
@@ -28,6 +36,10 @@
   pacman:
     name: "{{ timezone_package }}"
     state: present
+  register: pacman_install
+  until: pacman_install is success
+  retries: 3
+  delay: 3
   when: ansible_os_family == 'Archlinux' or ansible_os_family == 'Arch Linux'
   tags: ['timezone']
   become: true
