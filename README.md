@@ -1,7 +1,7 @@
 Role Name
 ========
 
-timezone
+base_timezone
 
 Role Variables
 --------------
@@ -19,12 +19,15 @@ Example Playbook
 ```
 
 ---
-- hosts: all
-  roles:
-  - yatesr.timezone
-
+- name: Set timezone
+  hosts: all
+  become: true
   vars:
    timezone: America/New_York
+
+  roles:
+    - dockpack.base_timezone
+
 
 ```
 
