@@ -36,4 +36,4 @@ Apache 2.0
 Author Information
 ------------------
 
-Ryan Yates
+Ryan Yates & Bas Meijer

@@ -1,7 +1,13 @@
 ---
-- hosts: all
-
+- name: Converge
+  hosts: all
+  become: true
   vars:
+    role_name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+
     timezone: 'America/New_York'
-  roles:
-    - role: ansible-timezone
+  tasks:
+    - name: "Include {{ role_name }}"
+      ansible.builtin.include_role:
+        name: "{{ role_name }}"
+...

@@ -1,29 +1,25 @@
 ---
 galaxy_info:
-  author: Ryan Yates
+  role_name: base_timezone
+  namespace: dockpack
+  author: Ryan Yates & Bas Meijer
   description: Role for managing timezone.
   company:
-  license: license (Apache 2.0)
-  min_ansible_version: 1.9
+  license: Apache 2.0
+  min_ansible_version: "2.10"
   platforms:
     - name: Ubuntu
       versions:
-        - precise
-        - trusty
+        - "ALL"
     - name: Debian
       versions:
-        - squeeze
-        - wheezy
-        - jessie
+        - "ALL"
     - name: EL
       versions:
-        - 6
-        - 7
+        - "ALL"
     - name: Fedora
       versions:
-        - 19
-        - 20
+        - "ALL"
   galaxy_tags:
     - system
-  role_name: timezone
 dependencies: []
