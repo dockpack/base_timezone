@@ -8,21 +8,22 @@ galaxy_info:
   license: Apache 2.0
   min_ansible_version: "2.10"
   platforms:
-    - name: Ubuntu
-      versions:
-        - "ALL"
     - name: Debian
       versions:
-        - "ALL"
+        - 'buster'
+        - 'bullseye'
+        - 'sid'
+        - 'stretch'
+    - name: Ubuntu
+      versions:
+        - 'focal'
+        - 'bionic'
+        - 'eoan'
+        - 'xenial'
     - name: EL
       versions:
-        - "ALL"
-    - name: Fedora
-      versions:
-        - "ALL"
-    - name: ArchLinux
-      versions:
-        - "ALL"
+        - '7'
+        - '8'
   galaxy_tags:
     - system
 dependencies: []
