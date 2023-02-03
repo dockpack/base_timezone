@@ -20,6 +20,9 @@ galaxy_info:
     - name: Fedora
       versions:
         - "ALL"
+    - name: ArchLinux
+      versions:
+        - "ALL"
   galaxy_tags:
     - system
 dependencies: []
